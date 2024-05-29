@@ -8,11 +8,12 @@
 header {
     height: 60px;
     width: 100%;
+    padding: 0.4em 0;
 }
 
 #main-nav {
     height: calc(100vh - 60px);
-    width: 70px;
+    width: 60px;
     background-color: #051E34;
     display: flex;
     flex-direction: column;
@@ -21,10 +22,49 @@ header {
     padding: 1em 0;
 }
 
+
+/* regole header */
+.desktop-logo {
+    display: none;
+}
+
+.input-group {
+    background-color: #E5E5E5;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+}
+
+.fa-magnifying-glass {
+    align-self: center;
+}
+
+.form-control {
+    background-color: #E5E5E5;
+    border: none;
+}
+.form-control:focus {
+    background-color: #E5E5E5;
+    box-shadow: none;
+}
+
+.desktop-icon {
+    display: none;
+}
+
+.icon-header {
+    font-size: 20px;
+    display: flex;
+    gap: 0.8em;
+}
+
+.fa-bell {
+    color: #FF8F00;
+}
+
 /* regole main nav */
 .ms-nav-item {
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.4em 0.8em;
 }
 .ms-nav-item:hover {
     background-color: #ffffff73;
@@ -34,8 +74,24 @@ header {
     display: none;
 }
 
+
+/* regole responsive */
 @media screen and (min-width: 1440px) {
 
+    /* header */
+    .mobile-logo {
+        display: none;
+    }
+
+    .desktop-logo {
+        display: inline-block;
+    }
+
+    .desktop-icon {
+        display: inline-block;
+    }
+
+    /* main nav */
     #main-nav {
         width: 140px;
     }
@@ -45,6 +101,11 @@ header {
         color: white;
         width: 80px;
     }
+
+    .ms-nav-item a:hover {
+        color: white;
+    }
+
     .ms-nav-item i {
         width: 20px;
     }
