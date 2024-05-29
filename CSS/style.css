@@ -33,3 +33,19 @@ header {
 .ms-nav-item a {
     display: none;
 }
+
+@media screen and (min-width: 1440px) {
+
+    #main-nav {
+        width: 140px;
+    }
+
+    .ms-nav-item a {
+        display: inline-block;
+        color: white;
+        width: 80px;
+    }
+    .ms-nav-item i {
+        width: 20px;
+    }
+}
