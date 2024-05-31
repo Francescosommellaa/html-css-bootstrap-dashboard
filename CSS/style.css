@@ -2,18 +2,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.ms-bg-header {
+    color: white;
+    background-color: #1B72E8;
+    padding: 1em 0.8em;
+}
+
+.ms-btn-primary {
+
+    color: white;
+    border: 1px solid white;
 }
 
 /* regole macrostruttura */
 header {
-    height: 60px;
+    height: 70px;
     width: 100%;
-    padding: 0.4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
 }
 
 #main-nav {
-    height: calc(100vh - 60px);
-    width: 60px;
+    height: calc(100vh - 70px);
+    width: 70px;
     background-color: #051E34;
     display: flex;
     flex-direction: column;
@@ -22,10 +38,20 @@ header {
     padding: 1em 0;
 }
 
+#main-content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+}
+
 
 /* regole header */
 .desktop-logo {
     display: none;
+}
+
+.ms-logo {
+    width: 36px;
 }
 
 .input-group {
@@ -74,9 +100,45 @@ header {
     display: none;
 }
 
+/* regole top main container */
+.ms-flex-containe {
+    display: flex;
+    align-items: center;
+}
+
+
+/* regole generali main-content */
+.ms-main-container {
+    height: calc(100vh - 70px);
+    width: calc(100vw - 70px);
+    overflow: auto;
+}
+
+.box {
+    width: 100%;
+    margin: 4px 0;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.ms-box-title {
+    border-radius: 8px 8px 0 0;
+    background-color: #F7F7F7;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid grey;
+}
+
+.table-desktop {
+    display: none;
+}
+
+/* prossime classi */
+.prossime-classi {
+
+}
 
 /* regole responsive */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
 
     /* header */
     .mobile-logo {
@@ -97,7 +159,7 @@ header {
     }
 
     .ms-nav-item a {
-        display: inline-block;
+        display: inline;
         color: white;
         width: 80px;
     }
@@ -108,5 +170,17 @@ header {
 
     .ms-nav-item i {
         width: 20px;
+    }
+
+    /* main content */
+
+    .ms-main-container {
+        height: calc(100vh - 70px);
+        width: calc(100vw - 140px);
+        overflow: auto;
+    }
+
+    .table-desktop {
+        display: block;
     }
 }
